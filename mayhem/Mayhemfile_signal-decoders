@@ -1,0 +1,9 @@
+project: savantenvs/trunk-recorder
+target: signal-decoders
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/signal-decoders/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_signal_decoders
+    libfuzzer: true
+    timeout: 10

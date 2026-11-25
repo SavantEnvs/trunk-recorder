@@ -1,0 +1,9 @@
+project: savantenvs/trunk-recorder
+target: op25-framers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/op25-framers/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_op25_framers
+    libfuzzer: true
+    timeout: 10

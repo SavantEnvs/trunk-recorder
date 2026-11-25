@@ -1,0 +1,9 @@
+project: savantenvs/trunk-recorder
+target: p25-parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/p25-parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_p25_parser
+    libfuzzer: true
+    timeout: 10

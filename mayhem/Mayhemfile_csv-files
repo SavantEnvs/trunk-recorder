@@ -1,0 +1,9 @@
+project: savantenvs/trunk-recorder
+target: csv-files
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/csv-files/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_csv_files
+    libfuzzer: true
+    timeout: 10
